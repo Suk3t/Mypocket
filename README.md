@@ -1,4 +1,8 @@
-# mypocket
+<p align="center">
+  <img src="public/mypocket-icon.svg" alt="Logo de mypocket" width="180">
+</p>
+
+<h1 align="center">mypocket</h1>
 
 Extensión Manifest V3 para guardar y organizar enlaces localmente. Los datos viven en IndexedDB mediante Dexie y no salen del navegador.
 

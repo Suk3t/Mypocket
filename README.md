@@ -21,7 +21,7 @@ Firefox y Safari no están soportados actualmente.
 
 ## Instalación desde GitHub Releases
 
-1. Descarga [`mypocket-v0.1.0.zip`](https://github.com/Suk3t/Mypocket/releases/download/v0.1.0/mypocket-v0.1.0.zip).
+1. Descarga el ZIP de la [versión más reciente](https://github.com/Suk3t/Mypocket/releases/latest).
 2. Descomprime el archivo ZIP.
 3. Abre la página de extensiones de tu navegador:
    - Chrome, Brave y Vivaldi: `chrome://extensions`

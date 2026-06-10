@@ -4,6 +4,22 @@
   padding: 32px 20px 48px;
 }
 
+.popup-page {
+  width: 420px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.popup-page #root,
+.popup-page .app-shell {
+  height: 100%;
+}
+
+.popup-page .app-shell {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .app-header,
 .form-heading,
 .library-heading,
@@ -198,6 +214,7 @@ button:disabled {
 
 .tag-list {
   padding: 2px 0 14px;
+  scrollbar-width: thin;
 }
 
 .tag-list button,
@@ -222,6 +239,15 @@ button:disabled {
 .bookmark-list {
   display: grid;
   gap: 10px;
+}
+
+.show-more-button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--accent);
 }
 
 .bookmark-card {

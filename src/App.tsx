@@ -27,6 +27,7 @@ function App() {
   const [search, setSearch] = useState('')
   const [selectedTag, setSelectedTag] = useState<string | null>(null)
   const [favoritesOnly, setFavoritesOnly] = useState(false)
+  const [showAllBookmarks, setShowAllBookmarks] = useState(false)
   const [editingId, setEditingId] = useState<number | null>(null)
   const [error, setError] = useState('')
 
@@ -59,6 +60,8 @@ function App() {
       return matchesSearch && matchesTag && matchesFavorite
     })
   }, [bookmarks, favoritesOnly, search, selectedTag])
+
+  const visibleBookmarks = showAllBookmarks ? filteredBookmarks : filteredBookmarks.slice(0, 2)
 
   function resetForm() {
     setForm(emptyForm)
@@ -198,7 +201,7 @@ function App() {
         <TagList tags={allTags} selectedTag={selectedTag} onSelect={setSelectedTag} />
 
         <div className="bookmark-list">
-          {filteredBookmarks.map((bookmark) => (
+          {visibleBookmarks.map((bookmark) => (
             <BookmarkCard
               key={bookmark.id}
               bookmark={bookmark}
@@ -214,6 +217,15 @@ function App() {
             </div>
           )}
         </div>
+        {filteredBookmarks.length > 2 && (
+          <button
+            className="show-more-button"
+            type="button"
+            onClick={() => setShowAllBookmarks((current) => !current)}
+          >
+            {showAllBookmarks ? 'Ver menos' : `Ver más (${filteredBookmarks.length - 2})`}
+          </button>
+        )}
       </section>
     </main>
   )

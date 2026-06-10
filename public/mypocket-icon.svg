@@ -1,0 +1,48 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="196" y1="96" x2="826" y2="920" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8B2CFF"/>
+      <stop offset="0.55" stop-color="#6236F2"/>
+      <stop offset="1" stop-color="#0D5BE8"/>
+    </linearGradient>
+    <linearGradient id="card" x1="318" y1="240" x2="752" y2="410" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A66BFF"/>
+      <stop offset="1" stop-color="#7A46F6"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="372" y1="430" x2="685" y2="701" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7434F4"/>
+      <stop offset="1" stop-color="#3D48D8"/>
+    </linearGradient>
+    <filter id="softShadow" x="180" y="130" width="720" height="780" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#14123A" flood-opacity="0.22"/>
+    </filter>
+    <filter id="innerSoft" x="220" y="255" width="620" height="600" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#6F5AFF" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <!-- App background -->
+  <rect x="46" y="34" width="932" height="946" rx="210" fill="url(#bg)"/>
+
+  <!-- Card behind pocket -->
+  <g filter="url(#softShadow)">
+    <path d="M300 313C294 261 326 218 379 213L720 175C772 169 812 203 817 255L833 419C838 471 805 512 753 517L412 555C360 561 319 527 314 475L300 313Z" fill="url(#card)"/>
+    <path d="M300 313C294 261 326 218 379 213L720 175C772 169 812 203 817 255L833 419C838 471 805 512 753 517L412 555C360 561 319 527 314 475L300 313Z" fill="white" opacity="0.08"/>
+  </g>
+
+  <!-- Pocket body -->
+  <g filter="url(#innerSoft)">
+    <path d="M224 324C224 304 240 288 260 288H764C784 288 800 304 800 324V611C800 754 680 867 512 867C344 867 224 754 224 611V324Z" fill="#FFFFFF"/>
+    <path d="M224 324C224 304 240 288 260 288H764C784 288 800 304 800 324V356C707 340 624 332 512 332C400 332 317 340 224 356V324Z" fill="#FAFAFF"/>
+    <path d="M224 355C310 338 400 330 512 330C624 330 714 338 800 355V395C712 379 623 372 512 372C401 372 312 379 224 395V355Z" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Stitching -->
+  <path d="M270 342V596C270 710 367 812 512 812C657 812 754 710 754 596V342" stroke="url(#brand)" stroke-width="10" stroke-linecap="round" stroke-dasharray="22 38" opacity="0.95"/>
+
+  <!-- M mark -->
+  <path d="M380 599V496C380 452 413 420 459 420C491 420 515 436 529 462C545 436 572 420 606 420C653 420 686 453 686 501V599C686 619 671 634 651 634C631 634 616 619 616 599V509C616 487 603 474 584 474C564 474 551 488 551 511V599C551 619 536 634 516 634C496 634 481 619 481 599V509C481 487 469 474 450 474C431 474 418 488 418 510V599C418 619 403 634 383 634C381 634 380 632 380 599Z" fill="url(#brand)"/>
+
+  <!-- Text -->
+  <text x="512" y="721" text-anchor="middle" font-family="Inter, Poppins, Arial, sans-serif" font-size="74" font-weight="800" letter-spacing="-3" fill="url(#brand)">mypocket</text>
+</svg>

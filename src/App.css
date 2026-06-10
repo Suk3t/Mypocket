@@ -1,0 +1,295 @@
+.app-shell {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.app-header,
+.form-heading,
+.library-heading,
+.bookmark-card__top,
+.bookmark-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.app-header {
+  margin-bottom: 24px;
+}
+
+.header-actions {
+  display: grid;
+  gap: 7px;
+}
+
+.header-actions .secondary-button {
+  font-size: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brand img {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 5px 8px rgba(72, 54, 208, 0.18));
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.bookmark-form,
+.bookmark-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.bookmark-form {
+  display: grid;
+  gap: 14px;
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.bookmark-form label {
+  display: grid;
+  gap: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--input);
+  color: var(--text);
+  font: inherit;
+  outline: none;
+}
+
+.bookmark-form input {
+  padding: 10px 12px;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent-soft);
+  outline-offset: 2px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 10px 14px;
+}
+
+.primary-button {
+  background: var(--accent);
+  color: white;
+}
+
+.secondary-button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.text-button {
+  padding: 4px 6px;
+  background: transparent;
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.text-button.danger {
+  color: var(--danger);
+}
+
+.error-message {
+  color: var(--danger);
+  font-size: 13px;
+}
+
+.library {
+  margin-top: 30px;
+}
+
+.library-heading span,
+.bookmark-card a span,
+.bookmark-card time,
+.empty-state span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.favorite-filter {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.favorite-filter input {
+  width: auto;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 16px 0 10px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+
+.search-bar:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.search-bar input {
+  padding: 11px 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.tag-list,
+.card-tags {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.tag-list {
+  padding: 2px 0 14px;
+}
+
+.tag-list button,
+.card-tags span {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--tag);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tag-list button {
+  padding: 6px 10px;
+}
+
+.tag-list button.active {
+  background: var(--accent);
+  color: white;
+}
+
+.bookmark-list {
+  display: grid;
+  gap: 10px;
+}
+
+.bookmark-card {
+  padding: 15px;
+  border-radius: 14px;
+}
+
+.bookmark-card a {
+  display: grid;
+  min-width: 0;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.bookmark-card a strong,
+.bookmark-card a span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.icon-button {
+  flex: 0 0 auto;
+  padding: 4px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 22px;
+}
+
+.icon-button.is-favorite {
+  color: var(--favorite);
+}
+
+.card-tags {
+  margin-top: 11px;
+}
+
+.card-tags span {
+  padding: 4px 8px;
+}
+
+.bookmark-card__footer {
+  margin-top: 13px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.empty-state {
+  display: grid;
+  gap: 4px;
+  padding: 32px 18px;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  color: var(--text);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .app-shell {
+    padding: 22px 14px 32px;
+  }
+
+  .app-header {
+    align-items: flex-start;
+  }
+
+  .secondary-button {
+    max-width: 120px;
+    font-size: 12px;
+  }
+}

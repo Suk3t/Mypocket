@@ -44,6 +44,27 @@
   font-size: 12px;
 }
 
+.drive-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 12px;
+}
+
+.drive-button img {
+  width: 18px;
+  height: 18px;
+}
+
+.drive-button:disabled {
+  opacity: 0.7;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -317,5 +338,11 @@ button:disabled {
   .secondary-button {
     max-width: 120px;
     font-size: 12px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .drive-button img {
+    filter: invert(1);
   }
 }

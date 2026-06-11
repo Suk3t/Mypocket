@@ -55,10 +55,16 @@ function LibraryPage() {
             <h1>Todos tus enlaces</h1>
           </div>
         </div>
-        <div className="library-stats">
-          <div><strong>{bookmarks.length}</strong><span>guardados</span></div>
-          <div><strong>{bookmarks.filter((bookmark) => bookmark.favorite).length}</strong><span>favoritos</span></div>
-          <div><strong>{allTags.length}</strong><span>etiquetas</span></div>
+        <div className="library-header-actions">
+          <button className="drive-button library-drive-button" type="button" disabled title="Google Drive: próximamente">
+            <img src="/google-drive.svg" alt="" />
+            <span>Google Drive<small>Próximamente</small></span>
+          </button>
+          <div className="library-stats">
+            <div><strong>{bookmarks.length}</strong><span>guardados</span></div>
+            <div><strong>{bookmarks.filter((bookmark) => bookmark.favorite).length}</strong><span>favoritos</span></div>
+            <div><strong>{allTags.length}</strong><span>etiquetas</span></div>
+          </div>
         </div>
       </header>
 

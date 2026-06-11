@@ -21,6 +21,28 @@
   font-size: clamp(30px, 4vw, 48px);
 }
 
+.library-header-actions {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.library-drive-button {
+  min-width: 130px;
+}
+
+.library-drive-button span {
+  display: grid;
+  text-align: left;
+}
+
+.library-drive-button small {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .library-stats {
   display: flex;
   gap: 10px;
@@ -99,6 +121,14 @@
 
   .library-stats {
     overflow-x: auto;
+  }
+
+  .library-header-actions {
+    display: grid;
+  }
+
+  .library-drive-button {
+    justify-self: start;
   }
 
   .library-toolbar {

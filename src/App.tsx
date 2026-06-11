@@ -130,6 +130,10 @@ function App() {
           </div>
         </div>
         <div className="header-actions">
+          <button className="drive-button" type="button" disabled title="Google Drive: próximamente">
+            <img src="/google-drive.svg" alt="" />
+            Drive
+          </button>
           <button className="secondary-button" type="button" onClick={openLibrary}>
             Abrir biblioteca
           </button>
